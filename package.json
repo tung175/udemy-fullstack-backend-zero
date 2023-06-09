@@ -1,0 +1,18 @@
+{
+  "name": "fullstack-backend-zero",
+  "version": "1.0.0",
+  "description": "Kyu Tung Fullstack backend zero",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "Kyu Tung",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}

@@ -1,14 +1,19 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
-require('dotenv').config()
+const configsViewEngine = require('./configs/viewEngine')
+const webRouters = require('./routes/web')
+const connection = require('./configs/database')
+
 
 const app = express()
 const port = process.env.PROT || 8080
 const hostname = process.env.HOST_NAME
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+configsViewEngine(app)
+app.use('/', webRouters)
+// app.use('/v1', webRouters)
+
 
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
